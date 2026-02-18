@@ -1,6 +1,46 @@
-Course Name,Category,Level,Description,Skills,Image
-Java Basics,Programming,Beginner,Learn Java fundamentals,Java OOP Backend,https://cdn-icons-png.flaticon.com/512/226/226777.png
-Spring Boot,Programming,Intermediate,Build backend applications,Java Spring Backend API,https://cdn-icons-png.flaticon.com/512/919/919836.png
-Machine Learning,AI,Advanced,ML algorithms and models,Python AI ML Data,https://cdn-icons-png.flaticon.com/512/4149/4149647.png
-React JS,Web,Intermediate,Modern frontend framework,React Frontend JavaScript,https://cdn-icons-png.flaticon.com/512/1126/1126012.png
-SQL Basics,Database,Beginner,Learn database queries,SQL Database Backend,https://cdn-icons-png.flaticon.com/512/4248/4248443.png
+Course Name,Category,Level,Description,Skills,Duration,Price,Rating,Image
+Java Basics,Programming,Beginner,Learn Java fundamentals and OOP,Java OOP Backend,6 weeks,199,4.5,https://cdn-icons-png.flaticon.com/512/226/226777.png
+Advanced Java,Programming,Advanced,Multithreading JVM and backend systems,Java Multithreading JVM,8 weeks,299,4.7,https://cdn-icons-png.flaticon.com/512/226/226777.png
+Spring Boot,Programming,Intermediate,Build REST APIs with Spring Boot,Java Spring Backend API,6 weeks,249,4.6,https://cdn-icons-png.flaticon.com/512/919/919836.png
+Python Basics,Programming,Beginner,Learn Python programming from scratch,Python Programming,5 weeks,149,4.4,https://cdn-icons-png.flaticon.com/512/5968/5968350.png
+Advanced Python,Programming,Advanced,Advanced Python for backend and automation,Python Backend Automation,7 weeks,279,4.7,https://cdn-icons-png.flaticon.com/512/5968/5968350.png
+Machine Learning,AI,Advanced,Supervised and unsupervised ML algorithms,Python ML AI,10 weeks,399,4.8,https://cdn-icons-png.flaticon.com/512/4149/4149647.png
+Deep Learning,AI,Advanced,Neural networks CNN and RNN,AI Neural Networks,12 weeks,449,4.8,https://cdn-icons-png.flaticon.com/512/4149/4149647.png
+Data Science,AI,Intermediate,Data analysis and visualization,Python Data Analysis,8 weeks,349,4.6,https://cdn-icons-png.flaticon.com/512/2103/2103633.png
+NLP Fundamentals,AI,Intermediate,Natural language processing basics,NLP Python AI,7 weeks,299,4.6,https://cdn-icons-png.flaticon.com/512/4149/4149647.png
+Computer Vision,AI,Advanced,Image processing and object detection,OpenCV AI Vision,9 weeks,399,4.7,https://cdn-icons-png.flaticon.com/512/4149/4149647.png
+React JS,Web,Intermediate,Frontend development with React,React JavaScript Frontend,6 weeks,249,4.5,https://cdn-icons-png.flaticon.com/512/1126/1126012.png
+HTML CSS JavaScript,Web,Beginner,Web development fundamentals,HTML CSS JS,5 weeks,149,4.4,https://cdn-icons-png.flaticon.com/512/841/841364.png
+Angular Development,Web,Advanced,Build frontend apps with Angular,Angular TypeScript Frontend,8 weeks,299,4.6,https://cdn-icons-png.flaticon.com/512/732/732190.png
+Node.js Backend,Web,Intermediate,Backend development with Node.js,Node API Backend,7 weeks,279,4.6,https://cdn-icons-png.flaticon.com/512/919/919825.png
+Full Stack Development,Web,Advanced,Frontend and backend development,React Node Fullstack,12 weeks,499,4.9,https://cdn-icons-png.flaticon.com/512/919/919825.png
+SQL Basics,Database,Beginner,Learn relational databases,SQL Database Backend,4 weeks,129,4.3,https://cdn-icons-png.flaticon.com/512/4248/4248443.png
+Advanced SQL,Database,Advanced,Query optimization and indexing,SQL Optimization,6 weeks,249,4.6,https://cdn-icons-png.flaticon.com/512/4248/4248443.png
+MongoDB,Database,Intermediate,NoSQL database fundamentals,MongoDB NoSQL Backend,5 weeks,199,4.4,https://cdn-icons-png.flaticon.com/512/919/919836.png
+PostgreSQL,Database,Intermediate,Advanced relational database management,PostgreSQL Database,6 weeks,249,4.5,https://cdn-icons-png.flaticon.com/512/4248/4248443.png
+Database Design,Database,Advanced,Database architecture and normalization,Database Design SQL,8 weeks,299,4.7,https://cdn-icons-png.flaticon.com/512/4248/4248443.png
+AWS Cloud,Cloud,Intermediate,Deploy applications on AWS,AWS EC2 S3 Lambda,6 weeks,349,4.7,https://cdn-icons-png.flaticon.com/512/873/873120.png
+Azure Cloud,Cloud,Intermediate,Cloud computing using Microsoft Azure,Azure Cloud DevOps,6 weeks,349,4.6,https://cdn-icons-png.flaticon.com/512/873/873120.png
+Google Cloud,Cloud,Intermediate,Google Cloud Platform fundamentals,GCP Cloud Deployment,6 weeks,349,4.6,https://cdn-icons-png.flaticon.com/512/873/873120.png
+Docker,DevOps,Intermediate,Containerization using Docker,Docker Containers DevOps,5 weeks,199,4.5,https://cdn-icons-png.flaticon.com/512/919/919853.png
+Kubernetes,DevOps,Advanced,Container orchestration using Kubernetes,Kubernetes DevOps,7 weeks,299,4.7,https://cdn-icons-png.flaticon.com/512/919/919853.png
+CI CD Pipeline,DevOps,Advanced,Continuous integration and deployment,CI CD DevOps Automation,6 weeks,249,4.6,https://cdn-icons-png.flaticon.com/512/919/919853.png
+Cyber Security,Security,Intermediate,Network and system security,Security Ethical Hacking,8 weeks,349,4.7,https://cdn-icons-png.flaticon.com/512/3064/3064155.png
+Ethical Hacking,Security,Advanced,Penetration testing and hacking,Ethical Hacking Security,10 weeks,399,4.8,https://cdn-icons-png.flaticon.com/512/3064/3064155.png
+Network Security,Security,Intermediate,Protect network infrastructure,Network Security Firewall,7 weeks,299,4.6,https://cdn-icons-png.flaticon.com/512/3064/3064155.png
+Computer Networking,Networking,Beginner,Networking fundamentals,TCP IP Routing,6 weeks,199,4.4,https://cdn-icons-png.flaticon.com/512/906/906324.png
+Advanced Networking,Networking,Advanced,Routing protocols and security,Cisco Routing Networking,8 weeks,349,4.7,https://cdn-icons-png.flaticon.com/512/906/906324.png
+IoT Fundamentals,IoT,Beginner,Internet of Things basics,IoT Sensors Embedded,6 weeks,249,4.5,https://cdn-icons-png.flaticon.com/512/2103/2103665.png
+Advanced IoT,IoT,Advanced,Smart IoT system design,IoT Cloud Automation,8 weeks,349,4.7,https://cdn-icons-png.flaticon.com/512/2103/2103665.png
+Blockchain,Finance,Advanced,Blockchain and crypto systems,Blockchain Crypto Finance,8 weeks,399,4.7,https://cdn-icons-png.flaticon.com/512/825/825533.png
+Finance Fundamentals,Finance,Beginner,Financial markets and investments,Finance Investment Banking,6 weeks,199,4.4,https://cdn-icons-png.flaticon.com/512/2331/2331966.png
+Stock Market,Finance,Intermediate,Stock trading and analysis,Stock Trading Finance,7 weeks,249,4.6,https://cdn-icons-png.flaticon.com/512/2331/2331966.png
+Digital Banking,Banking,Intermediate,Modern fintech and banking systems,Fintech Digital Banking,6 weeks,249,4.5,https://cdn-icons-png.flaticon.com/512/2830/2830284.png
+Banking Systems,Banking,Advanced,Core banking architecture,Banking Finance Systems,8 weeks,349,4.6,https://cdn-icons-png.flaticon.com/512/2830/2830284.png
+Linux Basics,Programming,Beginner,Linux command line fundamentals,Linux Shell Backend,4 weeks,129,4.3,https://cdn-icons-png.flaticon.com/512/6124/6124995.png
+Advanced Linux,Programming,Advanced,System administration and servers,Linux DevOps Servers,7 weeks,299,4.6,https://cdn-icons-png.flaticon.com/512/6124/6124995.png
+C++ Programming,Programming,Beginner,C++ fundamentals,OOP C++ Programming,6 weeks,199,4.4,https://cdn-icons-png.flaticon.com/512/6132/6132222.png
+DSA in C++,Programming,Advanced,Data structures and algorithms,C++ DSA Algorithms,10 weeks,399,4.8,https://cdn-icons-png.flaticon.com/512/6132/6132222.png
+System Design,Programming,Advanced,Scalable system architecture,System Design Backend,8 weeks,449,4.9,https://cdn-icons-png.flaticon.com/512/919/919836.png
+Software Testing,Programming,Intermediate,Manual and automation testing,Selenium Testing QA,6 weeks,249,4.5,https://cdn-icons-png.flaticon.com/512/919/919836.png
+Automation Testing,Programming,Advanced,Selenium and automation frameworks,Selenium Automation Testing,8 weeks,299,4.7,https://cdn-icons-png.flaticon.com/512/919/919836.png
