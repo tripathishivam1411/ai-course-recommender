@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Course Recommender</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="main-title">🚀 AI Course Recommender</h1>
+        <p class="subtitle">Find the perfect course using AI-powered recommendations</p>
+    </div>
+
+    <div class="card shadow-lg p-4 form-card">
+
+        <form method="POST">
+
+            <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text"
+                       name="username"
+                       class="form-control"
+                       placeholder="Enter your name"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Your Interest</label>
+                <textarea name="interest"
+                          class="form-control"
+                          rows="4"
+                          placeholder="Example: I want to learn AI and backend development"
+                          required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 recommend-btn">
+                🔍 Recommend Courses
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if recommendations %}
+
+    <div class="mt-5">
+        <h2 class="text-center mb-4">✨ Recommended Courses</h2>
+
+        <div class="row">
+
+            {% for course in recommendations %}
+
+            <div class="col-md-6 mb-4">
+
+                <div class="card course-card shadow-sm h-100">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            {{ course["Course Name"] }}
+                        </h5>
+
+                        <p class="card-text">
+                            <strong>Category:</strong>
+                            {{ course["Category"] }}
+                        </p>
+
+                        <p class="card-text">
+                            <strong>Level:</strong>
+                            {{ course["Level"] }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
