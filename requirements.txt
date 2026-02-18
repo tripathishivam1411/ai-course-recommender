@@ -1,5 +1,11 @@
-flask
-pandas
-scikit-learn
-sentence-transformers
-gunicorn
+flask==3.0.0
+gunicorn==21.2.0
+pandas==2.2.2
+scikit-learn==1.4.2
+sentence-transformers==2.7.0
+torch==2.2.2
+transformers==4.41.2
+numpy==1.26.4
+scipy==1.13.1
+huggingface-hub==0.23.0
+Pillow==10.3.0
