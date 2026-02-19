@@ -1,9 +1,13 @@
 from flask import Flask, render_template, request, redirect
-import recommender
 import os
+import recommender
 
 app = Flask(__name__)
 
+
+# ==========================
+# ENTER PAGE (Terms & Conditions)
+# ==========================
 @app.route("/", methods=["GET", "POST"])
 def enter():
 
@@ -13,6 +17,9 @@ def enter():
     return render_template("enter.html")
 
 
+# ==========================
+# DASHBOARD PAGE
+# ==========================
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
 
@@ -20,16 +27,33 @@ def dashboard():
 
     if request.method == "POST":
 
-        interest = request.form["interest"]
+        interest = request.form.get("interest")
 
-        recommendations = recommender.recommend_courses(interest)
+        if interest:
+            recommendations = recommender.recommend_courses(interest)
 
-    return render_template("dashboard.html",
-                           recommendations=recommendations)
+    return render_template(
+        "dashboard.html",
+        recommendations=recommendations
+    )
 
 
+# ==========================
+# LOGOUT ROUTE → Redirect to Enter page
+# ==========================
+@app.route("/logout")
+def logout():
+    return redirect("/")
+
+
+# ==========================
+# RUN APP (Render compatible)
+# ==========================
 if __name__ == "__main__":
 
     port = int(os.environ.get("PORT", 5000))
 
-    app.run(host="0.0.0.0", port=port)
+    app.run(
+        host="0.0.0.0",
+        port=port
+    )
