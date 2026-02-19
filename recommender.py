@@ -1,57 +1,33 @@
 import pandas as pd
-from sentence_transformers import SentenceTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-# Load dataset fresh every time
-def load_data():
-    data = pd.read_csv("data/courses.csv")
+# Load dataset
+data = pd.read_csv("data/courses.csv")
 
-    # Create strong combined text
-    data["combined"] = data.apply(
-    lambda row: (
-        f"Course: {row['Course Name']}. "
-        f"Category: {row['Category']}. "
-        f"Level: {row['Level']}. "
-        f"Description: {row['Description']}. "
-        f"Skills: {row['Skills']}."
-    ),
-    axis=1
+# Combine fields
+data["combined"] = (
+    data["Course Name"].astype(str) + " " +
+    data["Category"].astype(str) + " " +
+    data["Level"].astype(str) + " " +
+    data["Description"].astype(str) + " " +
+    data["Skills"].astype(str)
 )
 
+# Create TF-IDF model (LIGHTWEIGHT)
+vectorizer = TfidfVectorizer(stop_words="english")
 
-    return data
-
-
-# Load model once
-model = SentenceTransformer("all-MiniLM-L6-v2")
+course_vectors = vectorizer.fit_transform(data["combined"])
 
 
-# Recommendation function
 def recommend_courses(user_input, top_n=5):
 
-    data = load_data()
+    user_vector = vectorizer.transform([user_input])
 
-    # Generate embeddings for courses
-    course_embeddings = model.encode(
-        data["combined"].tolist(),
-        normalize_embeddings=True
-    )
+    similarity = cosine_similarity(user_vector, course_vectors)[0]
 
-    # Generate embedding for user input
-    user_embedding = model.encode(
-        [user_input],
-        normalize_embeddings=True
-    )
-
-    # Calculate similarity
-    similarity_scores = cosine_similarity(
-        user_embedding,
-        course_embeddings
-    )[0]
-
-    # Get top results
-    top_indices = similarity_scores.argsort()[::-1][:top_n]
+    top_indices = similarity.argsort()[::-1][:top_n]
 
     recommendations = []
 
@@ -64,8 +40,7 @@ def recommend_courses(user_input, top_n=5):
             "Duration": data.iloc[idx]["Duration"],
             "Price": data.iloc[idx]["Price"],
             "Rating": data.iloc[idx]["Rating"],
-            "Image": data.iloc[idx]["Image"],
-            "Score": float(similarity_scores[idx])
+            "Image": data.iloc[idx]["Image"]
         })
 
     return recommendations

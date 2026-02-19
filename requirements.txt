@@ -2,8 +2,6 @@ flask
 gunicorn
 pandas
 scikit-learn
-sentence-transformers
-torch
 transformers
 numpy
 scipy
